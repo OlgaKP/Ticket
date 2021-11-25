@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TiketManagerTest {
+class TicketManagerTest {
     private TicketManager manager = new TicketManager();
     private Ticket tik1 = new Ticket(1, 1000, "MSK", "BLG", 39);
     private Ticket tik2 = new Ticket(2, 1200, "MSK", "BLG", 30);
@@ -33,7 +33,6 @@ class TiketManagerTest {
         Ticket[] actual = manager.findAllFromTo("MSK", "BLG");
         Ticket[] expected = new Ticket[]{tik1, tik5, tik2};
 
-        Arrays.sort(actual);
         assertArrayEquals(expected, actual);
     }
 
@@ -42,7 +41,6 @@ class TiketManagerTest {
         Ticket[] actual = manager.findAllFromTo("MSK", "LND");
         Ticket[] expected = new Ticket[]{};
 
-        Arrays.sort(actual);
         assertArrayEquals(expected, actual);
     }
 
@@ -52,7 +50,6 @@ class TiketManagerTest {
         Ticket[] actual = manager.findAllFromTo("IZH", "LND");
         Ticket[] expected = new Ticket[]{tik3, tik4, tik6, tik7};
 
-        Arrays.sort(actual);
         assertArrayEquals(expected, actual);
     }
 }
