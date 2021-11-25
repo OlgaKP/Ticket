@@ -34,7 +34,6 @@ class TicketByPriceAscComparatorManagerTest {
         Ticket[] actual = manager.findAllFromTo("MSK", "BLG", new TicketByPriceAscComparator());
         Ticket[] expected = new Ticket[]{tik2, tik5, tik1};
 
-        Arrays.sort(actual, new TicketByPriceAscComparator());
         assertArrayEquals(expected, actual);
     }
 
@@ -43,7 +42,6 @@ class TicketByPriceAscComparatorManagerTest {
         Ticket[] actual = manager.findAllFromTo("MSK", "LND", new TicketByPriceAscComparator());
         Ticket[] expected = new Ticket[]{};
 
-        Arrays.sort(actual, new TicketByPriceAscComparator());
         assertArrayEquals(expected, actual);
     }
 
@@ -53,7 +51,6 @@ class TicketByPriceAscComparatorManagerTest {
         Ticket[] actual = manager.findAllFromTo("IZH", "LND", new TicketByPriceAscComparator());
         Ticket[] expected = new Ticket[]{tik4, tik7, tik6, tik3};
 
-        Arrays.sort(actual, new TicketByPriceAscComparator());
         assertArrayEquals(expected, actual);
     }
 }
